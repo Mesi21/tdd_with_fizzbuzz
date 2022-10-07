@@ -11,4 +11,14 @@ describe Solver do
       expect(result).to eq 1
     end
   end 
+
+  it 'should return 720 when N is equal to 6' do
+    result = @solver.factorial(6)
+    expect(result).to eql 720
+  end
+
+  it 'should raise an exception when N is a negative integer' do
+    result = @solver.factorial(-2)
+    expect(result).to match('No negative integer. This is an exception.')
+  end
 end
