@@ -21,4 +21,17 @@ describe Solver do
     result = @newSolver.factorial(-2)
     expect(result).to match('No negative integer. This is an exception.')
   end
+  context '#reverse method' do
+    it 'should take one argument string word and returns word in reverse' do
+      reversed_word = @solver.reverse('hello')
+      expect(reversed_word).to match('olleh')
+    end
+
+    it 'should return an empty string when word is empty' do
+      reversed_word = @solver.reverse('')
+      expect(reversed_word).to match('')
+    end
+  end
+
 end
+
